@@ -1,21 +1,20 @@
-import 'package:app/views/login.dart';
 import 'package:flutter/material.dart';
 
-class GetStartedButton extends StatelessWidget {
-  const GetStartedButton({super.key});
+class LoginButton extends StatefulWidget {
+  const LoginButton({super.key});
 
+  @override
+  State<LoginButton> createState() => _LoginButtonState();
+}
+
+class _LoginButtonState extends State<LoginButton> {
   @override
   Widget build(BuildContext context) {
     return Center(
       child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const Login()),
-          );
-        },
+        onPressed: () {},
         child: Text(
-          'Get started',
+          'Login',
           style: TextStyle(
             fontSize: 17,
           ),

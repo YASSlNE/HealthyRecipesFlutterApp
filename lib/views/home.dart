@@ -14,6 +14,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         body: Column(
       children: [
+        Container(
+          height: 480,
+          width: 410,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/homePageBg.png"), fit: BoxFit.cover),
+          ),
+        ),
         Spacer(),
         Container(
           child: Text(
@@ -32,25 +40,26 @@ class _HomePageState extends State<HomePage> {
             style: TextStyle(
               color: const Color.fromARGB(255, 159, 165, 192),
               fontSize: 22,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w300,
             ),
           ),
         ),
         Container(
-          child: Text(
+          child: const Text(
             "to cook better food!",
             style: TextStyle(
               color: Color.fromARGB(255, 159, 165, 192),
               fontSize: 22,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w300,
             ),
           ),
+          margin: EdgeInsets.only(bottom: 30),
         ),
         Spacer(),
         Container(
           child: GetStartedButton(),
           margin: EdgeInsets.only(
-            bottom: 10,
+            bottom: 30,
           ),
         )
       ],
